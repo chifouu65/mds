@@ -1,0 +1,43 @@
+/*
+    tailleX : taille en largeur du bouton
+    tailleY : taille en hauteur du bouton
+    position : gauche ou droite
+    couleur : couleur de base
+    texteCouleur : couleur du texte
+    onclick : callback onclick
+    arrondie : taille de l'arrondie de la bordure
+    texte : texte affiché sur le bouton
+    cible : balise dans laquelle insérer le bouton
+*/
+function createButton(tailleX,tailleY,gauche,couleur,texteCouleur,onclickCallback,arrondie,texte,cible){
+    let bouton = document.createElement("button");
+
+    bouton.setAttribute("type","button");
+    bouton.appendChild(document.createTextNode(texte));
+    bouton.setAttribute("onClick",onclickCallback);
+    bouton.style.width=tailleX;
+    bouton.style.height=tailleY;
+    bouton.style.backgroundColor=couleur;
+    bouton.style.color=texteCouleur;
+    bouton.style.fontWeight="bold";
+    arrondie ? bouton.style.borderRadius=arrondie : null;
+    bouton.style.position="absolute";
+    bouton.style.margin="15px";
+    if (gauche) {
+    
+    }
+    else {
+        bouton.style.right="0px";
+    }
+
+    
+    DOMcible = document.querySelector(cible);
+    DOMcible.appendChild(bouton);
+}
+
+let onClick = (text)=>{alert(text)};
+
+
+createButton("200px","80px",0,"#FF3333","#FFFFFF","onClick('je suis une erreur')","15px","Bouton Erreur","main");
+
+createButton("100px","100px",1,"#23FF23","#000000","onClick('je suis valide')",null,"Bouton Validation","main");
