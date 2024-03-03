@@ -1,0 +1,76 @@
+a {
+    color: white;
+    text-decoration: none; /* no underline */
+}
+ol, ul, div {
+    list-style: none;
+}
+
+.title {
+    font-style: italic;
+    font-weight: bolder;
+    font-family: Montserrat;
+}
+
+.card {
+    border: black 20px;
+}
+
+.background-primary {
+    background: #a41111;
+}
+
+.background-primary-dark {
+    background: #8c0f0f;
+
+}
+
+.text-green {
+    color: green;
+}
+
+button {
+    border-radius: 40px;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+h2 {
+    font-size: 42px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    max-height:150px;
+    min-height: 150px
+}
+
+ul.leaders {
+    max-width: 40em;
+    padding: 0;
+    overflow-x: hidden;
+    list-style: none}
+ul.leaders li:before {
+    float: left;
+    width: 0;
+    white-space: nowrap;
+    content:
+            ". . . . . . . . . . . . . . . . . . . . "
+            ". . . . . . . . . . . . . . . . . . . . "
+            ". . . . . . . . . . . . . . . . . . . . "
+            ". . . . . . . . . . . . . . . . . . . . "}
+ul.leaders span:first-child {
+    padding-right: 0.33em;
+    background: white}
+ul.leaders span + span {
+    float: right;
+    padding-left: 0.33em;
+    background: white}
+
